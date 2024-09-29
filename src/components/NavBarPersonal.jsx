@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState  , useContext} from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MouseContext } from "./context/MouseContext";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,16 @@ const NavBar = () => {
   const handleCloseMenu = () => {
     setIsOpen(false);
   };
+  const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
 
   return (
-    <div className="bg-[#0f0f0f] text-white flex items-center justify-between px-8 py-4 shadow-md">
-      <div className="text-4xl">
-        <NavLink to="/" className="hover:text-[#f1c40f]">
+    <div id="NavBarPersonal" className="bg-[#0f0f0f] text-white flex items-center justify-between px-8 py-4 shadow-md "
+    onMouseEnter={() => cursorChangeHandler("hovered")}
+             onMouseLeave={() => cursorChangeHandler("")}
+    >
+      <div className="text-4xl " >
+        <NavLink to="/" className="hover:text-[#f1c40f] cursor-none">
           a²⁷
         </NavLink>
       </div>
@@ -24,7 +30,7 @@ const NavBar = () => {
       <div className="block lg:hidden absolute right-0">
         <button
           onClick={toggleMenu}
-          className="text-white focus:outline-none focus:bg-gray-600 px-3 py-2 rounded"
+          className="text-white focus:outline-none px-3 py-2 rounded"
         >
           {isOpen ? (
             <svg
@@ -69,7 +75,7 @@ const NavBar = () => {
       >
         <NavLink
           to="/home"
-          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block"
+          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block cursor-none"
           activeClassName="text-[#f1c40f]"
           onClick={handleCloseMenu}
         >
@@ -77,7 +83,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           to="/about"
-          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block"
+          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block cursor-none"
           activeClassName="text-[#f1c40f]"
           onClick={handleCloseMenu}
         >
@@ -85,7 +91,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           to="/projects"
-          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block"
+          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block cursor-none"
           activeClassName="text-[#f1c40f]"
           onClick={handleCloseMenu}
         >
@@ -93,7 +99,7 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           to="/resume"
-          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block"
+          className="hover:text-[#f1c40f] transition-colors duration-300 block lg:inline-block cursor-none"
           activeClassName="text-[#f1c40f]"
           onClick={handleCloseMenu}
         >

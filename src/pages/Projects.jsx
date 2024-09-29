@@ -36,7 +36,7 @@ function Projects() {
    "https://github.com/Akshat2427/SplitIt",
   ];
   return (
-    <div className="bg-[#0f0f0f] text-white h-screen">
+    <div className="bg-gray-900 text-white h-screen">
      
       <div>
       <h1 className="text-center text-[50px] font-mono">Projects</h1>

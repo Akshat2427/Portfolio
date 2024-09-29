@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <>
-      <main className="relative h-[200vh]" ref={container}>
+      <main className="relative h-[200vh] w-full" ref={container}>
         <Landing scrollYProgress={scrollProgress} />  
         <About scrollYProgress={scrollProgress} />
       </main>
