@@ -1,46 +1,28 @@
-#Landing {
-    cursor: none;
+.ring {
+  margin: -60px 0 0 40px;
+  width: 1px;
+  height: 140px;
+  border: none;
+  background: linear-gradient(
+    to top,
+    #ffffff 0%,
+    #8f8f8f var(--progress, 0%),
+    #9a9a9a var(--progress, 0%),
+    #615d5d 100%
+  );
+  pointer-events: none;
+  z-index: 9998;
+  transition: background 0.3s linear;
+  box-shadow: none !important;
 }
 
-.ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    border: 2px solid rgba(255, 255, 255, 0.808);
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    -webkit-transition-duration: 100ms;
-    transition-duration: 100ms;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    will-change: width, height, transform, border;
-    z-index: 999;
-    pointer-events: none;
-  }
-  
-  .dot {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    pointer-events: none;
-  }
-  
-  .ring.hovered {
-    width: 50px;
-    height: 50px;
-    border-width: 3px;
-    border-color: lightgray;
-  }
-  
-  .dot.hovered {
-    display: none;
-  }
-  
+.counter {
+  position: absolute;
+  color: white;
+  opacity: 0.3;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 9999;
+  user-select: none;
+  box-shadow: none !important;
+}

@@ -5,6 +5,7 @@ import About from './pages/About';
 import Slideshow from './components/SlideShow';
 import Lenis from 'lenis';
 import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import './App.css';
 
 function Home() {
@@ -41,12 +42,15 @@ function Home() {
 
   return (
     <>
-      <main className="relative h-[200vh] w-full" ref={container}>
+  
+      <main className="relative h-[200vh] w-[100vw] overflow-hidden" ref={container}>
         <Landing scrollYProgress={scrollProgress} />  
         <About scrollYProgress={scrollProgress} />
       </main>
       <Projects  />
       <Slideshow />
+      <Contact/>
+
     </>
   );
 }

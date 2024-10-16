@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectLayout from "../components/ProjectLayout"; 
 import RandomDivs from "../components/TechStack"; 
 import Slideshow from "../components/SlideShow";
 
@@ -36,7 +35,7 @@ function Projects() {
    "https://github.com/Akshat2427/SplitIt",
   ];
   return (
-    <div className="bg-gray-900 text-white h-screen">
+    <div id="projects" className="bg-gray-900 text-white h-[210vh]">
      
       <div>
       <h1 className="text-center text-[50px] font-mono">Projects</h1>

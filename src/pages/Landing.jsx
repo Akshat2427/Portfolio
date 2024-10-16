@@ -1,35 +1,33 @@
-import React , {useContext} from "react";
+import React  from "react";
 import { useTransform, motion } from "framer-motion";
 import NavBar from "../components/NavBarPersonal";
 import { Typewriter } from 'react-simple-typewriter'
-import { Spotlight } from "../components/ui/Spotlight"; 
 import DotRing from "../components/DotRing";
-import { MouseContext } from "../components/context/MouseContext";
+import RotateText from "../components/RotateText";
 function Landing({scrollYProgress}) {
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-
+    const isLaptop = window.innerWidth >= 1024;
     const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
-    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const text = "GORGO-strony-internetowe-";
 
+    const Letter = text.split("");
     return (
-        // <motion.div style={{scale, rotate}} className="sticky top-0 h-screen bg-[#0f0f0f]  text-white pb-[10vh]">
-        <motion.div id="Landing" className="sticky top-0 h-screen bg-[#0f0f0f]  text-white pb-[10vh]">  
-          {/* <Spotlight /> */}
+<motion.div 
+  className="sticky top-0 h-screen bg-[#0f0f0f] text-white pb-[10vh]"
+  style={isLaptop ? { scale: scale, rotate: rotate } : {}}
+>        <motion.div id="Landing" className="sticky top-0 h-screen bg-[#0f0f0f]  text-white pb-[10vh] font-extralight">  
+       
           
-          <div       onMouseEnter={() => cursorChangeHandler("hovered")}
-             onMouseLeave={() => cursorChangeHandler("")} >
-            <NavBar
+          <NavBar
              
-            />
-            </div>
+             />
             <DotRing/>
-            <span className=" block text-center mt-[30vh] text-[40px]   text-white" style={{fontWeight:"lighter"}} >
+            <span className=" block font-extralight  text-center mt-[22vh] text-[40px]    text-white" s >
             {' '}
           
-            <div       onMouseEnter={() => cursorChangeHandler("hovered")}
-             onMouseLeave={() => cursorChangeHandler("")} >
+          
             <Typewriter
-              
+            
               words={[  'Hi' , 'My name is Akshat' , 'I am a developer. ' ]}
               loop={1}
               cursor
@@ -40,11 +38,19 @@ function Landing({scrollYProgress}) {
               
               
             />
-            </div>
+          
           </span>
+        <div className="rotater">
+          <RotateText/>
+          
+        </div>
+        {/* <div className="h-24 w-24 rounded-full bg-white flex justify-center items-center text-black absolute right-4 bottom-4 font-mono font-extrabold ">
+          <span>Resume</span>
+        </div> */}
           <div className="absolute left-1/2 bottom-24 transform -translate-x-1/2 text-center w-4 h-4 border-b-2 border-r-2 border-white rotate-45 animate-blink">
 </div>
 
+        </motion.div>
         </motion.div>
     );
     }
