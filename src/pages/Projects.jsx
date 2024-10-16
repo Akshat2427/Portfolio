@@ -27,12 +27,12 @@ function Projects() {
   const demo = [
     "https://split-it-3.vercel.app/",
     "https://split-it-3.vercel.app/",
-    "https://split-it-3.vercel.app/",
+    "https://akshat-vashisht-portfolio.vercel.app/",
   ];
   const github = [
    "https://github.com/Akshat2427/SplitIt",
    "https://github.com/Akshat2427/SplitIt",
-   "https://github.com/Akshat2427/SplitIt",
+   "https://github.com/Akshat2427/Portfolio",
   ];
   return (
     <div id="projects" className="bg-gray-900 text-white h-[210vh]">
