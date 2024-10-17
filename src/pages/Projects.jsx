@@ -4,35 +4,40 @@ import Slideshow from "../components/SlideShow";
 
 function Projects() {
   const images = [
-    "ChatSphere.png",
+   
     "SplitIt.png",
     "Portfolio.png",
-    
+    "ChatSphere.png",
   ];
   const titles = [
-    "Chat Sphere",
+   
     "Split It",
     "Portfolio",
+    "Chat Sphere",
   ];
   const descriptions = [
-    "Where Conversations Flow, Connections Grow, and Every Message Matters.",
+    
     "Simplifying Bill Sharing, Empowering Groups to Settle Expenses Seamlessly.",
-    "My Portfolio Website"
+    "My Portfolio Website",
+    "Where Conversations Flow, Connections Grow, and Every Message Matters.",
   ];
   const techStacks = [
-    "React, Redux, Socket.io, Express, MongoDB",
+    
     "React, Firebase, Context API",
     "React, Tailwind CSS",
+    "React, Redux, Socket.io, Express, MongoDB",
   ];
   const demo = [
-    "https://split-it-3.vercel.app/",
+   
     "https://split-it-3.vercel.app/",
     "https://akshat-vashisht-portfolio.vercel.app/",
+    "https://split-it-3.vercel.app/",
   ];
   const github = [
-   "https://github.com/Akshat2427/SplitIt",
+   
    "https://github.com/Akshat2427/SplitIt",
    "https://github.com/Akshat2427/Portfolio",
+   "https://github.com/Akshat2427/SplitIt",
   ];
   return (
     <div id="projects" className="bg-gray-900 text-white h-[210vh]">
