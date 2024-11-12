@@ -26,7 +26,7 @@ const NavBar = () => {
     >
       <div className="text-4xl">
         <NavLink to="/" className="hover:text-[#f1c40f] font-mono">
-       {"<tech/>"}
+       {"<sync/>"}
         </NavLink>
       </div>
 
@@ -73,7 +73,7 @@ const NavBar = () => {
         initial={{ x: "-100%" }}
         animate={isOpen ? { x: 0 } : { x: "-100%" }}
         transition={{ type: "tween", duration: 0.4 }}
-        className={`absolute top-20 left-0 w-full h-screen bg-black bg-opacity-95 flex flex-col items-center justify-start opacity-100 transition-all duration-500 ease-in-out z-10 lg:static lg:flex lg:flex-row lg:space-x-12 lg:h-auto lg:bg-transparent lg:w-auto lg:mx-[-400px] lg:p-0 font-mono space-y-8 lg:space-y-0`}
+        className={`absolute top-20 left-0 w-full h-screen bg-black bg-opacity-95 flex flex-col items-center justify-start opacity-100 transition-all duration-500 ease-in-out z-10 lg:static lg:flex lg:flex-row lg:space-x-12 lg:h-auto lg:bg-transparent lg:w-auto lg:mx-[-400px] lg:p-0 font-mono space-y-8 lg:space-y-0 pt-64`}
       >
         <Link
          to="Landing"

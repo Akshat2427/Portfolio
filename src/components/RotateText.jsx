@@ -13,6 +13,16 @@ export default function RotateText() {
 
   return (
     <div className="RotateText">
+
+      
+<div className="docx">
+  <span className="material-symbols-outlined text-7xl swing-icon">
+    docs
+  </span>
+</div>
+
+
+
       <section>
         {Letter.map((item, index) => {
           return (
@@ -33,7 +43,7 @@ export default function RotateText() {
     target="_blank"
     rel="noopener noreferrer"
     >
-    <div className="h-12 w-12 bg-white rounded-full "></div>
+    <div className="h-12 w-12 bg-white rounded-full circle "></div>
     </NavLink>
     </div>
   );

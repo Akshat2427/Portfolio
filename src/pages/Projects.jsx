@@ -19,25 +19,25 @@ function Projects() {
     
     "Simplifying Bill Sharing, Empowering Groups to Settle Expenses Seamlessly.",
     "My Portfolio Website",
-    "Where Conversations Flow, Connections Grow, and Every Message Matters.",
+    "Where Conversations Find Their Circle.",
   ];
   const techStacks = [
     
     "React, Firebase, Context API",
     "React, Tailwind CSS",
-    "React, Redux, Socket.io, Express, MongoDB",
+    "React, Redux, Socket.io, Express, MongoDB, Firebase",
   ];
   const demo = [
    
     "https://split-it-3.vercel.app/",
     "https://akshat-vashisht-portfolio.vercel.app/",
-    "https://split-it-3.vercel.app/",
+    "https://chat-sphere-pearl.vercel.app/",
   ];
   const github = [
    
    "https://github.com/Akshat2427/SplitIt",
    "https://github.com/Akshat2427/Portfolio",
-   "https://github.com/Akshat2427/SplitIt",
+   "https://github.com/Akshat2427/ChatSphere",
   ];
   return (
     <div id="projects" className="bg-gray-900 text-white h-[210vh]">

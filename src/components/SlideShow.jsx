@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Cards } from "../components/Cards";
 
 function SlideshowCard({ images = [], titles = [], descriptions = [], techStacks = [], demo = [], github = [] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(2);
   const [direction, setDirection] = useState(0);
 
   const nextImage = () => {
@@ -96,7 +96,7 @@ function SlideshowCard({ images = [], titles = [], descriptions = [], techStacks
 }
 
 function Slideshow({ images = [], titles = [], descriptions = [], techStacks = [], demo = [], github = [] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(2);
   const [direction, setDirection] = useState(0);
   const [isMobileScreen, setIsMobileScreen] = useState(false);
 
