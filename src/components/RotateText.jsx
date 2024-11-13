@@ -15,11 +15,17 @@ export default function RotateText() {
     <div className="RotateText">
 
       
-<div className="docx">
+<NavLink 
+    to={resumeText}
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+   <div className="docx">
   <span className="material-symbols-outlined text-7xl swing-icon">
     docs
   </span>
 </div>
+    </NavLink>
 
 
 
