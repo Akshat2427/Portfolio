@@ -28,12 +28,12 @@ const DotRing = () => {
   return (
     <>
       <div className="ring" style={cursorStyle}></div>
-      <div
+      {/* <div
         className="counter"
         style={{ transform: `translate(${x + 70}px, ${y - 250}px)` }}
       >
         <div className="count">{Math.round(progress)}%</div>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -3,13 +3,13 @@
   width: 1px;
   height: 140px;
   border: none;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     #ffffff 0%,
     #8f8f8f var(--progress, 0%),
     #9a9a9a var(--progress, 0%),
     #615d5d 100%
-  );
+  ); */
   pointer-events: none;
   z-index: 9998;
   transition: background 0.3s linear;
