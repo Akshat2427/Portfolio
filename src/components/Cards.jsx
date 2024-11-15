@@ -30,7 +30,7 @@ import {
         <Typography className="text-gray-600 text-center leading-relaxed">
           {description}
           + 
-"            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est minus quod impedit in reiciendis excepturi eaque delectus vel pariatur atque nulla rem, enim eum numquam nostrum harum doloremque. Magni et est nemo dolores vero officiis!
+"            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est minus quod impedit in reiciendis excepturi eaque delectus vel pariatur atque nulla rem, enim eum numquam nostrum harum doloremque. Magni et est nemo dolores verot officiis!
 "          
         </Typography>
       </CardBody>
