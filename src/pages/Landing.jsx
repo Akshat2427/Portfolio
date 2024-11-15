@@ -22,7 +22,7 @@ function Landing({scrollYProgress}) {
              
              />
             <DotRing/>
-            <span className=" block font-extralight  text-center mt-[22vh] text-[40px]    text-white" s >
+            <span className=" block font-extralight  text-center mt-[22vh] text-[40px]    text-white" >
             {' '}
           
           

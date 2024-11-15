@@ -61,34 +61,32 @@ function SlideshowCard({ images = [], titles = [], descriptions = [], techStacks
           </motion.div>
         </AnimatePresence>
         <div className="absolute inset-0 flex justify-between items-center px-4">
-          <button
+          <div
             onClick={prevImage}
             className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-transform duration-300 hover:scale-110 absolute bottom-[45%] sm:bottom-[50%] left-0"
           >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-full text-white focus:outline-none shadow-lg transition-colors duration-300"
+            <button
+             
+              className="p-2 rounded-full text-white  shadow-lg  "
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
-            </motion.button>
-          </button>
-          <button
+            </button>
+          </div>
+          <div
             onClick={nextImage}
             className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-transform duration-300 hover:scale-110 absolute bottom-[45%] sm:bottom-[50%] right-0"
           >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-full text-white focus:outline-none shadow-lg transition-colors duration-300"
+            <button
+             
+              className="p-2 rounded-full text-white  shadow-lg "
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
-            </motion.button>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -184,7 +182,7 @@ function Slideshow({ images = [], titles = [], descriptions = [], techStacks = [
             </div>
           </div>
           <div className="absolute inset-0 flex justify-between items-center px-4">
-            <button
+            <div
               onClick={prevImage}
               className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-transform duration-300 hover:scale-110"
             >
@@ -197,8 +195,8 @@ function Slideshow({ images = [], titles = [], descriptions = [], techStacks = [
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                 </svg>
               </motion.button>
-            </button>
-            <button
+            </div>
+            <div
               onClick={nextImage}
               className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600 transition-transform duration-300 hover:scale-110"
             >
@@ -211,7 +209,7 @@ function Slideshow({ images = [], titles = [], descriptions = [], techStacks = [
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </motion.button>
-            </button>
+            </div>
           </div>
         </div>
       )}

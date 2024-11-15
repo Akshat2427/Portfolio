@@ -5,7 +5,7 @@ import {
     CardFooter,
     Typography,
     Button,
-  } from "@material-tailwind/react";
+  } from "./CardComponentFile";
    
   export function Cards({img , title, description, CODE, DEMO}) {
 
@@ -37,16 +37,26 @@ import {
     
 
       <CardFooter className="flex justify-evenly p-6 bg-gray-50 border-t">
-        <Button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300">
-          <a href={CODE} target="_blank" rel="noreferrer">
-            Code
-          </a>
-        </Button>
-        <Button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-all duration-300">
-          <a href={DEMO} target="_blank" rel="noreferrer">
-            Demo
-          </a>
-        </Button>
+      {/* <Button 
+  className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300"
+  as="a" 
+  href={CODE} 
+  target="_blank" 
+  rel="noreferrer"
+>
+  Code
+</Button> */}
+
+<Button 
+  className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-all duration-300"
+  as="a" 
+  href={DEMO} 
+  target="_blank" 
+  rel="noreferrer"
+>
+  Go to my  Github to have its demo and Source Code
+</Button>
+
       </CardFooter>
     </Card>
     
