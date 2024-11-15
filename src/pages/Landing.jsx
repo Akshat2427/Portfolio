@@ -13,9 +13,9 @@ function Landing({scrollYProgress}) {
     const Letter = text.split("");
     return (
 <motion.div 
-  className="sticky top-0 h-screen bg-[#0f0f0f] text-white pb-[10vh]"
+  className="sticky top-0 h-screen bg-[#0f0f0f] text-white pb-[10vh] "
   style={isLaptop ? { scale: scale, rotate: rotate } : {}}
->        <motion.div id="Landing" className="sticky top-0 h-screen bg-[#0f0f0f]  text-white pb-[10vh] font-extralight">  
+>        <motion.div id="Landing" className="sticky top-0  h-screen bg-[#0f0f0f]  text-white pb-[10vh] font-extralight">  
        
           
           <NavBar

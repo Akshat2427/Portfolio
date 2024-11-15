@@ -24,11 +24,18 @@ const NavBar = () => {
       onMouseEnter={() => cursorChangeHandler("hovered")}
       onMouseLeave={() => cursorChangeHandler("")}
     >
-      <div className="text-4xl">
-        <NavLink to="/" className="hover:text-[#f1c40f] font-mono">
-       {"<sync/>"}
-        </NavLink>
-      </div>
+  <div className="text-4xl relative group">
+    <div className="hover:text-[#f1c40f] font-mono">
+      <h1 style={{ fontFamily: "Spicy Rice" }}>
+        <a href="https://bhaya.tech/why">AKSHAT</a>
+        <span className="tooltiptext absolute left-52 transform -translate-x-1/2 opacity-0 transition-opacity duration-200 bg-gray-800 text-white text-sm py-1 px-3 rounded shadow-lg group-hover:opacity-100 font-mono w-40">
+        Curious why it’s called bhaya.tech? <br /> Tap here to uncover the mystery!
+        </span>
+      </h1>
+    </div>
+  </div>
+
+
 
       <div className="block lg:hidden absolute right-0">
         <button

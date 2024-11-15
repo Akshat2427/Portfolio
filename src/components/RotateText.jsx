@@ -20,10 +20,11 @@ export default function RotateText() {
     target="_blank"
     rel="noopener noreferrer"
     >
-   <div className="docx">
+   <div className="docx mb-14">
   <span className="material-symbols-outlined text-7xl swing-icon">
     docs
   </span>
+
 </div>
     </NavLink>
 
