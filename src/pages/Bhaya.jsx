@@ -4,17 +4,21 @@ function Bhaya() {
    
     return (
         <div className='h-screen w-full p-8 pt-0  '>
-             <Link to="/" className='h-[10vh] w-[10vh]  absolute left-8 top-8 bg-black rounded-full flex items-center justify-center'>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="w-6 h-6 text-white transform rotate-180"
-                >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </Link>
+             <Link
+    to="/"
+    className="h-[10vh] w-[10vh] absolute left-8 top-8 bg-black rounded-full flex items-center justify-center hidden sm:flex"
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        className="w-6 h-6 text-white transform rotate-180"
+    >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+    </svg>
+</Link>
+
            
             <div className='pl-8 py-8' style={{ fontFamily: "revert" }}>
                 <h1 className='text-7xl pb-7 text-center underline' style={{ fontFamily: "Spicy Rice" }}>
