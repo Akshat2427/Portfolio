@@ -8,11 +8,11 @@ export default function RotateText() {
   // console.log("text", text);
 
   const Letter = text.split("");
-  const resumeText = "https://drive.google.com/file/d/18EfDSVPXgsmgNIn_WYoLKBvBqHCLTmfV/preview"
+  const resumeText = "https://drive.google.com/file/d/18EfDSVPXgsmgNIn_WYoLKBvBqHCLTmfV"
 
 
   return (
-    <div className="RotateText">
+    <div className="RotateText bg-transparent">
 
       
 <NavLink 
@@ -20,9 +20,9 @@ export default function RotateText() {
     target="_blank"
     rel="noopener noreferrer"
     >
-   <div className="docx mb-14">
-  <span className="material-symbols-outlined text-7xl swing-icon">
-    docs
+   <div className=" mb-14">
+  <span className="material-symbols-outlined text-7xl swing-icon lg:hidden">
+  <img src="resume.png" alt="reume" className="h-20" />
   </span>
 
 </div>

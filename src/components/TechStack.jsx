@@ -1,22 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
+
+// to get icons go to iconscout.com and search for the icon you want , then go to more info and paste the id on "https://cdn.iconscout.com/icon/free/png-512/free-redis-1175105.png?f=webp&w=512",
 const divsData = [
   {
-    name: "html",
+    name: "AWS",
     top: "10vh",
     left: "5vw",
     image:
-      "https://cdn.iconscout.com/icon/free/png-512/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944937.png?f=webp&w=512",
+      "https://cdn.iconscout.com/icon/free/png-512/free-aws-1869025-1583149.png?f=webp&w=512",
     width: "100px",
     height: "100px",
   },
   {
-    name: "css",
+    name: "docker",
+    top: "45vh",
+    left: "25vw",
+    image:
+      "https://cdn.iconscout.com/icon/free/png-512/free-docker-2538317.png?f=webp&w=512",
+    width: "140px",
+    height: "140px",
+  },
+  {
+    name: "redis",
+    top: "10vh",
+    left: "90vw",
+    image:
+      "https://cdn.iconscout.com/icon/free/png-512/free-redis-1175105.png?f=webp&w=512",
+    width: "130px",
+    height: "130px",
+  },
+  {
+    name: "Postgresql",
     top: "20vh",
     left: "25vw",
     image:
-      "https://cdn.iconscout.com/icon/free/png-512/free-css-alt-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-2-pack-logos-icons-3029935.png?f=webp&w=512",
+      "https://cdn.iconscout.com/icon/free/png-512/free-postgresql-226047.png?f=webp&w=512",
     width: "120px",
     height: "120px",
   },
@@ -103,20 +123,20 @@ const divsData = [
 ];
 const divsDataMobile = [
   {
-    name: "html",
+    name: "AWS",
     top: "10vh",
     left: "5vw",
     image:
-      "https://cdn.iconscout.com/icon/free/png-512/free-html-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-3-pack-logos-icons-2944937.png?f=webp&w=512",
+      "https://cdn.iconscout.com/icon/free/png-512/free-aws-1869025-1583149.png?f=webp&w=512",
     width: "80px",
     height: "80px",
   },
   {
-    name: "css",
+    name: "Postgresql",
     top: "25vh",
     left: "45vw",
     image:
-      "https://cdn.iconscout.com/icon/free/png-512/free-css-alt-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-2-pack-logos-icons-3029935.png?f=webp&w=512",
+      "https://cdn.iconscout.com/icon/free/png-512/free-postgresql-226047.png?f=webp&w=512",
     width: "70px",
     height: "70px",
   },

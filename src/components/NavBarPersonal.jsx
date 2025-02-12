@@ -27,7 +27,9 @@ const NavBar = () => {
   <div className="text-4xl relative group">
     <div className="hover:text-[#f1c40f] font-mono">
       <h1 style={{ fontFamily: "Spicy Rice" }}>
-        <a href="https://bhaya.tech/why">AKSHAT</a>
+        <a href="https://bhaya.tech/why">
+        <img src="Logo.png" alt="Akshat" className="h-10" />
+        </a>
         <span className="tooltiptext absolute left-52 transform -translate-x-1/2 opacity-0 transition-opacity duration-200 bg-gray-800 text-white text-sm py-1 px-3 rounded shadow-lg group-hover:opacity-100 font-mono w-40">
         Curious why it’s called bhaya.tech? <br /> Tap here to uncover the mystery!
         </span>
@@ -80,7 +82,7 @@ const NavBar = () => {
         initial={{ x: "-100%" }}
         animate={isOpen ? { x: 0 } : { x: "-100%" }}
         transition={{ type: "tween", duration: 0.4 }}
-        className={`absolute top-20 left-0 w-full h-screen bg-[#0f0f0f] bg-opacity-95 flex flex-col items-center justify-start opacity-100 transition-all duration-500 ease-in-out z-10 lg:static lg:flex lg:flex-row lg:space-x-12 lg:h-auto lg:bg-transparent lg:w-auto lg:mx-[-400px] lg:p-0 font-mono space-y-8 lg:space-y-0 pt-64`}
+        className={`absolute top-20 left-0 w-full h-screen bg-[#0f0f0f]  flex flex-col items-center justify-start opacity-100 transition-all duration-500 ease-in-out z-10 lg:static lg:flex lg:flex-row lg:space-x-12 lg:h-auto lg:bg-transparent lg:w-auto lg:mx-[-400px] lg:p-0 font-mono space-y-8 lg:space-y-0 pt-64`}
       >
         <Link
          to="Landing"
