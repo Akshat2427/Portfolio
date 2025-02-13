@@ -22,7 +22,7 @@ function Projects() {
     "A  Expense Tracker for Daily Use  with interactive UI and easy to use features.",
     "Simplifying Bill Sharing, Empowering Groups to Settle Expenses Seamlessly.",
    
-    "Where Conversations Find Their Circle.",
+    "Where Conversations Find Their Circle , seamless, secure, and engaging chats anytime, anywhere.",
   ];
   const techStacks = [
     "React , Redux , MongoDB , Express , Firebase, Tailwind CSS",

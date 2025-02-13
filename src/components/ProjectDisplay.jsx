@@ -22,7 +22,7 @@ function ProjectDisplay({ images, titles, descriptions, techStacks, demo, github
       <div className="grid md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="bg-white shadow-lg  overflow-hidden">
-            <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
+            <img src={project.image} alt={project.title} className="w-full h-48 md:h-64  object-cover" />
             <div className="p-5">
               <h2 className="text-2xl font-bold text-black text-left">{project.title}</h2>
               <p className="text-gray-700 mt-2  text-left">{project.description}</p>
@@ -37,14 +37,14 @@ function ProjectDisplay({ images, titles, descriptions, techStacks, demo, github
                 View Project →
               </button>
                 </a>
-                {/* <a
+                <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-4 py-2 rounded-full"
+                  className="  pt-4 rounded-full"
                 >
-                  Code
-                </a> */}
+                 <img src="https://cdn.iconscout.com/icon/free/png-512/free-github-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-2496133.png?f=webp&w=512" alt="github" className="h-10" />
+                </a>
               </div>
             </div>
           </div>

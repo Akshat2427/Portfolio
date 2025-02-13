@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
 
 // to get icons go to iconscout.com and search for the icon you want , then go to more info and paste the id on "https://cdn.iconscout.com/icon/free/png-512/free-redis-1175105.png?f=webp&w=512",
 const divsData = [
@@ -121,6 +120,7 @@ const divsData = [
     height: "150px",
   },
 ];
+
 const divsDataMobile = [
   {
     name: "AWS",
@@ -223,7 +223,7 @@ const divsDataMobile = [
 ];
 
 function RandomDivs() {
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
   const [isMobileScreen, setIsMobileScreen] = useState(false);
 
@@ -240,14 +240,13 @@ function RandomDivs() {
   }, []);
 
   return (
-    <div className="bg-white relative h-screen overflow-hidden flex flex-col justify-center items-center">
+    <div ref={ref} className="bg-white relative h-screen overflow-hidden flex flex-col justify-center items-center">
       <h1 className="text-black text-5xl font-bold mb-8">My Tech Stack</h1>
       <p className="text-black text-lg mb-8">I've been recently working with</p>
 
       {isMobileScreen
         ? divsDataMobile.map((div, index) => (
             <motion.div
-              ref={ref}
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
@@ -280,7 +279,6 @@ function RandomDivs() {
           ))
         : divsData.map((div, index) => (
             <motion.div
-              ref={ref}
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ duration: 1, ease: "easeInOut" }}
