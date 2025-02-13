@@ -21,7 +21,7 @@ export default function RotateText() {
     rel="noopener noreferrer"
     >
    <div className=" mb-14">
-  <span className="material-symbols-outlined text-7xl swing-icon lg:hidden">
+  <span className="material-symbols-outlined text-7xl swing-icon md:hidden">
   <img src="resume.png" alt="reume" className="h-20" />
   </span>
 
