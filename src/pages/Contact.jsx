@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaEnvelope, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -55,6 +55,14 @@ const Contact = () => {
 
     
         <div className="flex space-x-6">
+          <a
+            href="https://x.com/ak__vashisht" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-white hover:text-[#f1c40f] transition-colors"
+          >
+            <FaTwitter />
+          </a>
           <a
             href="https://github.com/Akshat2427" 
             target="_blank"
