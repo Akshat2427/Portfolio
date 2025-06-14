@@ -28,7 +28,7 @@ const NavBar = () => {
     <div className="hover:text-[#f1c40f] font-mono">
       <h1 style={{ fontFamily: "Merienda" }} className="flex items-center">
   <span className="relative">
-    <img src="cat_logo.png" alt="Akshat" className="h-10 inline align-middle" />
+    <img src="cat_logo_bg.png" alt="Akshat" className="h-10 inline align-middle" />
     <span
       className="font-bold absolute left-[90%] top-2/3 -translate-y-1/2 text-white"
       style={{ pointerEvents: "none" }}
