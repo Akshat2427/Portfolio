@@ -29,27 +29,44 @@ function ProjectDisplay({
       </p>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="flip-card group perspective">
-            <div className="flip-card-inner group-hover:rotate-y-180 transition-transform duration-500 w-full" style={{ height: "auto", minHeight: 420 }}>
-              {/* Front */}
-              <div className="flip-card-front absolute w-full h-full backface-hidden rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-[#f5f5f7]">
-                {/* Mac window bar */}
-                <div className="flex items-center px-4 py-2 bg-[#e0e0e0] border-b border-gray-300 relative">
-                  <span className="w-3 h-3 bg-red-500 rounded-full mr-2 flex items-center justify-center text-xs font-bold text-white"></span>
-                  <span className="w-3 h-3 bg-yellow-400 rounded-full mr-2 flex items-center justify-center text-xs font-bold text-white"></span>
-                  <span className="w-3 h-3 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold text-white"></span>
-                  <span className="ml-4 text-xs text-gray-500 truncate  ">{project.title}</span>
-                </div>
-                {/* Project image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full object-cover object-left bg-white"
-                  style={{ height: "400px", minHeight: "400px", maxHeight: "400px", display: "block" }}
-                />
+          <div key={index} className="relative group perspective">
+            {/* Project image as background */}
+            <div
+              className="rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-[#f5f5f7] relative"
+              style={{
+                minHeight: 420,
+                height: "auto",
+                background: `url(${project.image}) center/cover no-repeat`,
+              }}
+            >
+              {/* Mac window bar */}
+              <div className="flex items-center px-4 py-2 bg-[#e0e0e0] border-b border-gray-300 relative z-10">
+                <span className="w-3 h-3 bg-red-500 rounded-full mr-2 flex items-center justify-center text-xs font-bold text-white"></span>
+                <span className="w-3 h-3 bg-yellow-400 rounded-full mr-2 flex items-center justify-center text-xs font-bold text-white"></span>
+                <span className="w-3 h-3 bg-green-500 rounded-full flex items-center justify-center text-xs font-bold text-white"></span>
+                <span className="ml-4 text-xs text-gray-500 truncate">
+                  {project.title}
+                </span>
               </div>
-              {/* Back */}
-              <div className="flip-card-back absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col justify-center items-center p-6">
+              {/* Blur overlay and content */}
+              <div
+                className="absolute inset-0 flex flex-col justify-center items-center p-6 transition-all duration-500"
+                style={{
+                  background: "rgba(255,255,255,0.7)",
+                  backdropFilter: "blur(10px)",
+                  opacity: 0,
+                  pointerEvents: "none",
+                }}
+              ></div>
+              <div
+                className="absolute inset-0 flex flex-col justify-center items-center p-6 transition-all duration-500 group-hover:opacity-100 group-hover:pointer-events-auto"
+                style={{
+                  background: "rgba(255,255,255,0.7)",
+                  backdropFilter: "blur(10px)",
+                  opacity: 0,
+                  pointerEvents: "none",
+                }}
+              >
                 <h2 className="text-2xl font-bold text-black mb-2">
                   {project.title}
                 </h2>
@@ -89,34 +106,14 @@ function ProjectDisplay({
           </div>
         ))}
       </div>
-      {/* Flip card CSS */}
+      {/* Blur overlay CSS for smooth effect */}
       <style>{`
         .perspective {
           perspective: 1200px;
         }
-        .flip-card {
-          width: 100%;
-          position: relative;
-        }
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          transform-style: preserve-3d;
-        }
-        .flip-card-front, .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-        .group:hover .flip-card-inner {
-          transform: rotateY(180deg);
+        .group:hover .absolute.inset-0 {
+          opacity: 1 !important;
+          pointer-events: auto !important;
         }
       `}</style>
     </div>
