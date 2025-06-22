@@ -190,11 +190,18 @@ const Contact = () => {
         className="absolute top-8 left-1/2 -translate-x-1/2 text-3xl font-bold text-white z-10 tracking-wide"
         style={{ fontFamily: "'Permanent Marker', cursive" }}
       >
-        Send Me a Message
+        {isMobile ? (
+          <span className="flex items-center gap-2">
+            <FaPaperPlane className="inline-block text-[#f1c40f] text-2xl" />
+            Pin Me
+          </span>
+        ) : (
+          "Send Me a Message"
+        )}
       </h1>
       <div className="w-full h-full flex items-center justify-center relative" style={{ minHeight: "80vh" }}>
         {isMobile ? (
-          // Only show the custom card, styled larger and centered, no title/socials
+          // Only show the custom card, styled larger and centered, with icons (no send arrow at top)
           <motion.div
             initial={{
               top: "50%",
@@ -218,6 +225,45 @@ const Contact = () => {
             className="bg-white/95 shadow-2xl rounded-3xl p-8 w-[92vw] max-w-lg flex flex-col items-center border border-gray-200 z-20"
             style={{ minHeight: 420 }}
           >
+            {/* Social icons */}
+            <div className="flex space-x-6 justify-center mb-4">
+              <a
+                href="https://x.com/ak__vashisht"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-[#181818] hover:text-[#1da1f2] transition-colors"
+                title="Twitter"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://github.com/Akshat2427"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-[#181818] hover:text-[#333] transition-colors"
+                title="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="mailto:vashishtakshat3@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-[#181818] hover:text-[#c71610] transition-colors"
+                title="Email"
+              >
+                <FaEnvelope />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/akshat-24-vashisht"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-[#181818] hover:text-[#0077b5] transition-colors"
+                title="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
             <textarea
               placeholder="Type your message..."
               className="w-full mb-3 px-4 py-3 rounded bg-gray-100 border border-gray-300 focus:outline-none text-base"
@@ -232,6 +278,7 @@ const Contact = () => {
               value={formData[7].email}
               onChange={e => handleInputChange(7, "email", e.target.value)}
             />
+            {/* Keep the bottom send button for accessibility */}
             <button
               className="mt-2 bg-[#f1c40f] hover:bg-[#d4a807] text-black font-semibold py-2 px-6 rounded-full flex items-center gap-2 transition-colors duration-300 text-base"
               onClick={() => handleSend(7)}
