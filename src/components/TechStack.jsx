@@ -119,6 +119,15 @@ const divsData = [
     width: "150px",
     height: "150px",
   },
+  {
+    name: "Ruby",
+    top: "80vh",
+    left: "90vw",
+    image:
+      "https://cdn.iconscout.com/icon/free/png-512/ruby-47-1175101.png?f=webp&w=512",
+    width: "130px",
+    height: "130px",
+  }
 ];
 
 const divsDataMobile = [
@@ -220,6 +229,15 @@ const divsDataMobile = [
     width: "70px",
     height: "70px",
   },
+  {
+    name: "Ruby",
+    top: "90vh",
+    left: "50vw",
+    image:
+      "https://cdn.iconscout.com/icon/free/png-512/ruby-47-1175101.png?f=webp&w=512",
+    width: "70px",
+    height: "80px",
+  }
 ];
 
 function RandomDivs() {
