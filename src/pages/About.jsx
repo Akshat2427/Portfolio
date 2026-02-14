@@ -165,7 +165,7 @@ function About() {
             }}
             initial={{ opacity: 0, scale: 0.8 }}
             transition={{ 
-              delay: 0.5, 
+              delay: 0, 
               duration: 0.8, 
               ease: "easeOut",
               borderRadius: {
@@ -180,7 +180,9 @@ function About() {
             style={{
               borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%"
             }}
+            initial={{ opacity: 0 }}
             animate={isVisible ? {
+              opacity: 1,
               rotate: [0, 360],
               borderRadius: [
                 "60% 40% 30% 70% / 60% 30% 70% 40%",
@@ -190,10 +192,12 @@ function About() {
                 "60% 40% 30% 70% / 60% 30% 70% 40%"
               ]
             } : {
+              opacity: 0,
               rotate: 0,
               borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%"
             }}
             transition={{
+              opacity: { duration: 0.8, ease: "easeOut" },
               rotate: {
                 repeat: isVisible ? Infinity : 0,
                 duration: 10,

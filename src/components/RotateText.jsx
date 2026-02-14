@@ -4,7 +4,7 @@ import "./RotateText.css";
 import { NavLink } from "react-router-dom";
 
 export default function RotateText() {
-  const text = "R e s u m e      R e s u m e    ";
+  const text = "R e s u m  e      R e s u m  e    ";
   // console.log("text", text);
 
   const Letter = text.split("");

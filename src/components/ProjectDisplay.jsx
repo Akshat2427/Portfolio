@@ -73,9 +73,9 @@ function ProjectDisplay({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="bg-black text-white px-4 py-2 rounded-full transition-all duration-300 hover:bg-gray-800">
+                  {/* <button className="bg-black text-white px-4 py-2 rounded-full transition-all duration-300 hover:bg-gray-800">
                     Live Demo →
-                  </button>
+                  </button> */}
                 </a>
                 <a
                   href={project.github}
@@ -147,9 +147,9 @@ function ProjectDisplay({
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button className="bg-black text-white px-4 py-2 rounded-full transition-all duration-300 hover:bg-gray-800">
+                      {/* <button className="bg-black text-white px-4 py-2 rounded-full transition-all duration-300 hover:bg-gray-800">
                         Live Demo →
-                      </button>
+                      </button> */}
                     </a>
                     <a
                       href={project.github}
