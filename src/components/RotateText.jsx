@@ -8,7 +8,7 @@ export default function RotateText() {
   // console.log("text", text);
 
   const Letter = text.split("");
-  const resumeText = "https://drive.google.com/file/d/18EfDSVPXgsmgNIn_WYoLKBvBqHCLTmfV"
+  const resumeText = "https://drive.google.com/file/d/1kZaCpwt9EGsMDHbljpVquIINSXr0JU19/view?usp=sharing"
 
 
   return (
